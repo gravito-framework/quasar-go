@@ -1,0 +1,21 @@
+# Binaries
+dist/
+*.exe
+quasar
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Test
+coverage.out
+coverage.html
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Go
+vendor/
