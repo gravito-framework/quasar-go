@@ -10,7 +10,7 @@ GOBUILD := $(GOCMD) build
 GOTEST := $(GOCMD) test
 GOMOD := $(GOCMD) mod
 BINARY_NAME := quasar-go
-DOCKER_IMAGE := gravito/quasar-go-agent
+DOCKER_IMAGE := carllee/quasar-go-agent
 
 # Directories
 BUILD_DIR := ./dist

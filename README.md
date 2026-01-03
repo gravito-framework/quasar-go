@@ -12,7 +12,7 @@ Quasar is a lightweight, cross-platform monitoring agent that collects system me
 docker run -d \
   -e QUASAR_SERVICE=my-laravel-app \
   -e QUASAR_REDIS_URL=redis://host.docker.internal:6379 \
-  gravito/quasar-go-agent:latest
+  carllee/quasar-go-agent:latest
 ```
 
 > **Note**: `host.docker.internal` is a special DNS name for **local development** that allows the container to reach Redis on your host machine. In production, replace this with your actual Redis host or service name.
@@ -120,7 +120,7 @@ services:
       - quasar
 
   quasar:
-    image: gravito/quasar-go-agent:latest
+    image: carllee/quasar-go-agent:latest
     environment:
       QUASAR_SERVICE: my-laravel-app
       QUASAR_TRANSPORT_REDIS_URL: redis://zenith-redis:6379
