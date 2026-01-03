@@ -95,8 +95,9 @@ type HeartbeatPayload struct {
 	CPU       CPUMetrics      `json:"cpu"`
 	Memory    MemoryMetrics   `json:"memory"`
 	Queues    []QueueSnapshot `json:"queues,omitempty"`
-	Runtime   RuntimeInfo     `json:"runtime"`
-	Timestamp int64           `json:"timestamp"`
+	Runtime   RuntimeInfo            `json:"runtime"`
+	Meta      map[string]interface{} `json:"meta,omitempty"` // Extra metadata like Laravel root, worker count
+	Timestamp int64                  `json:"timestamp"`
 }
 
 // ============================================
@@ -107,12 +108,13 @@ type HeartbeatPayload struct {
 type CommandType string
 
 const (
-	CmdRetryJob  CommandType = "RETRY_JOB"
-	CmdDeleteJob CommandType = "DELETE_JOB"
+	CmdRetryJob      CommandType = "RETRY_JOB"
+	CmdDeleteJob     CommandType = "DELETE_JOB"
+	CmdLaravelAction CommandType = "LARAVEL_ACTION"
 )
 
 // AllowedCommands is the security allowlist
-var AllowedCommands = []CommandType{CmdRetryJob, CmdDeleteJob}
+var AllowedCommands = []CommandType{CmdRetryJob, CmdDeleteJob, CmdLaravelAction}
 
 // IsAllowed checks if a command type is in the allowlist
 func (c CommandType) IsAllowed() bool {
@@ -126,10 +128,11 @@ func (c CommandType) IsAllowed() bool {
 
 // CommandPayload contains command-specific data
 type CommandPayload struct {
-	Queue  string      `json:"queue"`
+	Queue  string      `json:"queue,omitempty"`
 	JobID  string      `json:"jobId,omitempty"`
 	JobKey string      `json:"jobKey,omitempty"`
 	Driver QueueDriver `json:"driver,omitempty"`
+	Action string      `json:"action,omitempty"` // For LARAVEL_ACTION
 }
 
 // QuasarCommand represents a command from Zenith

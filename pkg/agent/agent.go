@@ -201,12 +201,19 @@ func (a *Agent) AddQueueProbe(probe probes.QueueProbe) {
 	a.queueProbes = append(a.queueProbes, probe)
 }
 
+// GetMonitorClient returns the Redis client for monitoring.
+// If monitorRedis is not configured, it returns transportRedis.
+func (a *Agent) GetMonitorClient() *redis.Client {
+	a.mu.RLock()
+	defer a.mu.RUnlock()
+	if a.monitorRedis != nil {
+		return a.monitorRedis
+	}
+	return a.transportRedis
+}
+
 // EnableRemoteControl enables the command listener for Zenith commands
 func (a *Agent) EnableRemoteControl(ctx context.Context) error {
-	if a.monitorRedis == nil {
-		return fmt.Errorf("monitor Redis connection required for remote control")
-	}
-
 	a.mu.RLock()
 	nodeID := a.nodeID
 	a.mu.RUnlock()
@@ -226,7 +233,7 @@ func (a *Agent) EnableRemoteControl(ctx context.Context) error {
 		a.logger,
 	)
 
-	if err := a.commandListener.Start(ctx, a.monitorRedis); err != nil {
+	if err := a.commandListener.Start(ctx, a.GetMonitorClient()); err != nil {
 		return fmt.Errorf("failed to start command listener: %w", err)
 	}
 
@@ -323,6 +330,9 @@ func (a *Agent) tick(ctx context.Context) error {
 			Framework: "Quasar",
 			Status:    agentStatus,
 			Errors:    agentErrors,
+		},
+		Meta: map[string]interface{}{
+			"laravel": probes.GetLaravelWorkerStats(),
 		},
 		Timestamp: time.Now().UnixMilli(),
 	}

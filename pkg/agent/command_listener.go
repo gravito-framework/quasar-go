@@ -44,6 +44,7 @@ func NewCommandListener(
 	// Register default executors
 	cl.RegisterExecutor(commands.NewRetryJobExecutor())
 	cl.RegisterExecutor(commands.NewDeleteJobExecutor())
+	cl.RegisterExecutor(commands.NewLaravelActionExecutor())
 
 	return cl
 }

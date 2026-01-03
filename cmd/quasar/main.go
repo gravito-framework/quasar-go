@@ -23,7 +23,6 @@ import (
 	"github.com/gravito-framework/quasar-go/pkg/agent"
 	"github.com/gravito-framework/quasar-go/pkg/config"
 	"github.com/gravito-framework/quasar-go/pkg/probes/queue"
-	"github.com/redis/go-redis/v9"
 )
 
 var (
@@ -85,25 +84,20 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Configure queue monitoring if monitor Redis is provided
-	if cfg.MonitorRedisURL != "" {
-		monitorOpts, _ := redis.ParseURL(cfg.MonitorRedisURL)
-		monitorClient := redis.NewClient(monitorOpts)
-
-		// Add queue probes from config
-		for _, q := range cfg.Queues {
-			switch q.Type {
-			case "laravel":
-				if q.Prefix != "" {
-					a.AddQueueProbe(queue.NewLaravelProbeWithPrefix(monitorClient, q.Name, q.Prefix))
-				} else {
-					a.AddQueueProbe(queue.NewLaravelProbe(monitorClient, q.Name))
-				}
-				logger.Info("Monitoring Laravel queue", "name", q.Name)
-			case "redis":
-				a.AddQueueProbe(queue.NewRedisListProbe(monitorClient, q.Name))
-				logger.Info("Monitoring Redis queue", "name", q.Name)
+	// Add queue probes from config
+	monitorClient := a.GetMonitorClient()
+	for _, q := range cfg.Queues {
+		switch q.Type {
+		case "laravel":
+			if q.Prefix != "" {
+				a.AddQueueProbe(queue.NewLaravelProbeWithPrefix(monitorClient, q.Name, q.Prefix))
+			} else {
+				a.AddQueueProbe(queue.NewLaravelProbe(monitorClient, q.Name))
 			}
+			logger.Info("Monitoring Laravel queue", "name", q.Name)
+		case "redis":
+			a.AddQueueProbe(queue.NewRedisListProbe(monitorClient, q.Name))
+			logger.Info("Monitoring Redis queue", "name", q.Name)
 		}
 	}
 
@@ -113,11 +107,9 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Enable remote control if monitor Redis is available
-	if cfg.MonitorRedisURL != "" {
-		if err := a.EnableRemoteControl(ctx); err != nil {
-			logger.Warn("Failed to enable remote control", "error", err)
-		}
+	// Enable remote control
+	if err := a.EnableRemoteControl(ctx); err != nil {
+		logger.Warn("Failed to enable remote control", "error", err)
 	}
 
 	// Wait for shutdown signal
