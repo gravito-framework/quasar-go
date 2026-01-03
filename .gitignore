@@ -1,7 +1,8 @@
 # Binaries
 dist/
 *.exe
-quasar
+/quasar-go
+/quasar
 
 # IDE
 .idea/
