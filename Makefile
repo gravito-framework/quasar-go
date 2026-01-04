@@ -39,6 +39,13 @@ build-all:
 	GOOS=windows GOARCH=amd64 $(GOBUILD) $(LDFLAGS) -o $(BUILD_DIR)/$(BINARY_NAME)-windows-amd64.exe $(CMD_DIR)
 	@echo "✅ Built binaries for all platforms"
 
+## Build debug tool
+build-debug-tool:
+	@echo "🔨 Building debug-process..."
+	@mkdir -p $(BUILD_DIR)
+	$(GOBUILD) $(LDFLAGS) -o $(BUILD_DIR)/debug-process ./cmd/debug_process
+	@echo "✅ Built: $(BUILD_DIR)/debug-process"
+
 ## Run tests
 test:
 	@echo "🧪 Running tests..."
