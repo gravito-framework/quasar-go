@@ -128,7 +128,7 @@ func main() {
 }
 
 func printHelp() {
-	fmt.Println(`Usage: quasar [options]
+	fmt.Print(`Usage: quasar [options]
 
 Quasar is the Gravito infrastructure monitoring agent. It collects system
 metrics (CPU, RAM) and queue status, sending them to Zenith for visualization.
