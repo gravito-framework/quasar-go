@@ -59,7 +59,6 @@ func (cl *CommandListener) channel() string {
 	return fmt.Sprintf("gravito:quasar:cmd:%s:%s", cl.service, cl.nodeID)
 }
 
-
 // Start begins listening for commands
 func (cl *CommandListener) Start(ctx context.Context, monitorRedis *redis.Client) error {
 	cl.mu.Lock()

@@ -112,7 +112,7 @@ runtime.ReadMemStats(&m)
 
 #### 功能
 - ✅ **語言識別**: 自動標記為 `go`
-- ✅ **版本資訊**: Go 版本 (如 `go1.25.5`)
+- ✅ **版本資訊**: Go 版本 (如 `go1.24.0`)
 - ✅ **進程資訊**: PID, Hostname, Platform
 - ✅ **運行時間**: Agent uptime (秒)
 
@@ -122,7 +122,7 @@ runtime.ReadMemStats(&m)
   "id": "server-01-12345",
   "service": "my-laravel-app",
   "language": "go",
-  "version": "go1.25.5",
+  "version": "go1.24.0",
   "pid": 12345,
   "hostname": "server-01",
   "platform": "linux",
@@ -150,7 +150,7 @@ runtime.ReadMemStats(&m)
   "id": "server-01-12345",
   "service": "my-laravel-app",
   "language": "go",
-  "version": "go1.25.5",
+  "version": "go1.24.0",
   "pid": 12345,
   "hostname": "server-01",
   "platform": "linux",
@@ -856,8 +856,8 @@ spec:
 | Go 版本 | 狀態 | CI 測試 |
 |---------|------|---------|
 | Go 1.23 | ✅ | ✅ |
-| Go 1.24 | ✅ | ✅ |
-| Go 1.25 | ✅ | ✅ (推薦) |
+| Go 1.24 | ✅ | ✅ (推薦) |
+| Go 1.25 | ✅ | ⚠️ (手動驗證) |
 
 ---
 
