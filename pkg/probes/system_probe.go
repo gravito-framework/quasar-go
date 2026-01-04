@@ -86,7 +86,8 @@ func (p *GoSystemProbe) sampleCPU() {
 		current := times[0]
 		now := time.Now()
 
-		deltaTotal := current.Total() - p.lastCPUTimes.Total()
+		deltaTotal := (current.User + current.System + current.Idle + current.Nice + current.Iowait + current.Irq + current.Softirq + current.Steal) -
+			(p.lastCPUTimes.User + p.lastCPUTimes.System + p.lastCPUTimes.Idle + p.lastCPUTimes.Nice + p.lastCPUTimes.Iowait + p.lastCPUTimes.Irq + p.lastCPUTimes.Softirq + p.lastCPUTimes.Steal)
 		deltaIdle := current.Idle - p.lastCPUTimes.Idle
 
 		if deltaTotal > 0 {
@@ -125,12 +126,16 @@ func (p *GoSystemProbe) getDarwinSystemCPU() (float64, error) {
 			// Parse user
 			userPart := strings.TrimSpace(strings.TrimPrefix(parts[0], "CPU usage:"))
 			userVal := 0.0
-			fmt.Sscanf(userPart, "%f%%", &userVal)
+			if _, err := fmt.Sscanf(userPart, "%f%%", &userVal); err != nil {
+				// Continue with next part if parsing fails
+			}
 
 			// Parse sys
 			sysPart := strings.TrimSpace(parts[1])
 			sysVal := 0.0
-			fmt.Sscanf(sysPart, "%f%%", &sysVal)
+			if _, err := fmt.Sscanf(sysPart, "%f%%", &sysVal); err != nil {
+				// Continue
+			}
 
 			return round(userVal+sysVal, 2), nil
 		}

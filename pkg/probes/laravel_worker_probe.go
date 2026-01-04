@@ -51,7 +51,7 @@ func GetLaravelWorkerStats() *LaravelWorkerStats {
 			proc = cached
 		} else {
 			// First time seeing this process, prime CPU calculation
-			proc.CPUPercent()
+			_, _ = proc.CPUPercent()
 			workerProcessCache[p.Pid] = proc
 		}
 

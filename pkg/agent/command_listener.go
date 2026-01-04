@@ -59,10 +59,6 @@ func (cl *CommandListener) channel() string {
 	return fmt.Sprintf("gravito:quasar:cmd:%s:%s", cl.service, cl.nodeID)
 }
 
-// broadcastPattern returns the pattern for broadcast commands
-func (cl *CommandListener) broadcastPattern() string {
-	return fmt.Sprintf("gravito:quasar:cmd:%s:*", cl.service)
-}
 
 // Start begins listening for commands
 func (cl *CommandListener) Start(ctx context.Context, monitorRedis *redis.Client) error {
