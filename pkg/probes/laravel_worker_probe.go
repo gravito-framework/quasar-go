@@ -76,10 +76,19 @@ func GetLaravelWorkerStats() *LaravelWorkerStats {
 			}
 
 			// This should now return a non-zero value on subsequent calls
-			cpuPercent, _ := proc.CPUPercent()
-			
-			status, _ := proc.Status()
-			
+			cpuPercent, err := proc.CPUPercent()
+			if err != nil {
+				cpuPercent = 0
+			}
+
+			statusList, err := proc.Status()
+			var status string
+			if err != nil {
+				status = "unknown"
+			} else {
+				status = strings.Join(statusList, ",")
+			}
+
 			cwd, err := proc.Cwd()
 			if err == nil && cwd != "" {
 				rootsMap[cwd] = true
@@ -90,7 +99,7 @@ func GetLaravelWorkerStats() *LaravelWorkerStats {
 				Cmdline: cmdline,
 				Memory:  memRSS,
 				CPU:     cpuPercent,
-				Status:  strings.Join(status, ","),
+				Status:  status,
 			})
 		}
 	}
