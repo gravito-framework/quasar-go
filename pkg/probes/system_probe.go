@@ -19,14 +19,14 @@ import (
 type GoSystemProbe struct {
 	startTime time.Time
 	proc      *process.Process
-	
+
 	// CPU sampling
-	mu            sync.RWMutex
-	lastCPUTimes  cpu.TimesStat
-	lastSampleTime time.Time
+	mu               sync.RWMutex
+	lastCPUTimes     cpu.TimesStat
+	lastSampleTime   time.Time
 	cachedCPUPercent float64
-	stopSampler   chan struct{}
-	isDarwin      bool
+	stopSampler      chan struct{}
+	isDarwin         bool
 }
 
 // NewGoSystemProbe creates a new system probe for Go processes
@@ -78,21 +78,21 @@ func (p *GoSystemProbe) cpuSampler() {
 // sampleCPU takes a CPU sample and calculates usage
 func (p *GoSystemProbe) sampleCPU() {
 	times, err := cpu.Times(false)
-	
+
 	p.mu.Lock()
 	defer p.mu.Unlock()
 
 	if err == nil && len(times) > 0 {
 		current := times[0]
 		now := time.Now()
-		
+
 		deltaTotal := current.Total() - p.lastCPUTimes.Total()
 		deltaIdle := current.Idle - p.lastCPUTimes.Idle
 
 		if deltaTotal > 0 {
 			p.cachedCPUPercent = round(100*(deltaTotal-deltaIdle)/deltaTotal, 2)
 		}
-		
+
 		p.lastCPUTimes = current
 		p.lastSampleTime = now
 	} else if p.isDarwin {
@@ -121,17 +121,17 @@ func (p *GoSystemProbe) getDarwinSystemCPU() (float64, error) {
 			if len(parts) < 2 {
 				continue
 			}
-			
+
 			// Parse user
 			userPart := strings.TrimSpace(strings.TrimPrefix(parts[0], "CPU usage:"))
 			userVal := 0.0
 			fmt.Sscanf(userPart, "%f%%", &userVal)
-			
+
 			// Parse sys
 			sysPart := strings.TrimSpace(parts[1])
 			sysVal := 0.0
 			fmt.Sscanf(sysPart, "%f%%", &sysVal)
-			
+
 			return round(userVal+sysVal, 2), nil
 		}
 	}
@@ -215,7 +215,7 @@ func (p *GoSystemProbe) getMemoryMetrics() (*types.MemoryMetrics, error) {
 		Free:  0,
 		Used:  0,
 	}
-	
+
 	if v, err := mem.VirtualMemory(); err == nil {
 		systemMem.Total = v.Total
 		systemMem.Free = v.Available
@@ -228,7 +228,7 @@ func (p *GoSystemProbe) getMemoryMetrics() (*types.MemoryMetrics, error) {
 		HeapTotal: 0,
 		HeapUsed:  0,
 	}
-	
+
 	if memInfo, err := p.proc.MemoryInfo(); err == nil {
 		processMem.RSS = memInfo.RSS
 		processMem.HeapTotal = memInfo.RSS

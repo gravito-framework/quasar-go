@@ -79,22 +79,22 @@ type MemoryMetrics struct {
 type RuntimeInfo struct {
 	Uptime    float64  `json:"uptime"`
 	Framework string   `json:"framework"`
-	Status    string   `json:"status"`            // "online", "degraded", "error"
+	Status    string   `json:"status"`           // "online", "degraded", "error"
 	Errors    []string `json:"errors,omitempty"` // Connection errors or probe failures
 }
 
 // HeartbeatPayload is the complete payload sent to Zenith
 type HeartbeatPayload struct {
-	ID        string          `json:"id"`
-	Service   string          `json:"service"`
-	Language  Language        `json:"language"`
-	Version   string          `json:"version"`
-	PID       int             `json:"pid"`
-	Hostname  string          `json:"hostname"`
-	Platform  string          `json:"platform"`
-	CPU       CPUMetrics      `json:"cpu"`
-	Memory    MemoryMetrics   `json:"memory"`
-	Queues    []QueueSnapshot `json:"queues,omitempty"`
+	ID        string                 `json:"id"`
+	Service   string                 `json:"service"`
+	Language  Language               `json:"language"`
+	Version   string                 `json:"version"`
+	PID       int                    `json:"pid"`
+	Hostname  string                 `json:"hostname"`
+	Platform  string                 `json:"platform"`
+	CPU       CPUMetrics             `json:"cpu"`
+	Memory    MemoryMetrics          `json:"memory"`
+	Queues    []QueueSnapshot        `json:"queues,omitempty"`
 	Runtime   RuntimeInfo            `json:"runtime"`
 	Meta      map[string]interface{} `json:"meta,omitempty"` // Extra metadata like Laravel root, worker count
 	Timestamp int64                  `json:"timestamp"`

@@ -16,14 +16,14 @@ func main() {
 	}
 
 	fmt.Printf("Total processes: %d\n", len(procs))
-	
+
 	count := 0
 	for _, p := range procs {
 		cmdline, err := p.Cmdline()
 		if err != nil {
 			continue
 		}
-		
+
 		if strings.Contains(cmdline, "artisan") {
 			fmt.Printf("Found artisan: %s\n", cmdline)
 			count++

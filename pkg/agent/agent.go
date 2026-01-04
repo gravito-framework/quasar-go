@@ -300,7 +300,7 @@ func (a *Agent) tick(ctx context.Context) error {
 	agentStatus := "online"
 
 	if err := a.transportRedis.Ping(ctx).Err(); err != nil {
-		// We can't actually SEND this if transport is down, 
+		// We can't actually SEND this if transport is down,
 		// but we track it for local logging and future recovery
 		agentStatus = "error"
 		agentErrors = append(agentErrors, "transport_redis_offline")

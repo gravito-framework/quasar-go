@@ -30,21 +30,21 @@ func TestCommandTypeIsAllowed(t *testing.T) {
 func TestNewSuccessResult(t *testing.T) {
 	cmdID := "test-cmd-123"
 	message := "Operation completed"
-	
+
 	result := NewSuccessResult(cmdID, message)
-	
+
 	if result.CommandID != cmdID {
 		t.Errorf("Expected CommandID %s, got %s", cmdID, result.CommandID)
 	}
-	
+
 	if result.Status != StatusSuccess {
 		t.Errorf("Expected status %s, got %s", StatusSuccess, result.Status)
 	}
-	
+
 	if result.Message != message {
 		t.Errorf("Expected message %s, got %s", message, result.Message)
 	}
-	
+
 	// Timestamp should be recent
 	now := time.Now().UnixMilli()
 	if result.Timestamp < now-1000 || result.Timestamp > now+1000 {
@@ -55,17 +55,17 @@ func TestNewSuccessResult(t *testing.T) {
 func TestNewFailedResult(t *testing.T) {
 	cmdID := "test-cmd-456"
 	message := "Operation failed"
-	
+
 	result := NewFailedResult(cmdID, message)
-	
+
 	if result.CommandID != cmdID {
 		t.Errorf("Expected CommandID %s, got %s", cmdID, result.CommandID)
 	}
-	
+
 	if result.Status != StatusFailed {
 		t.Errorf("Expected status %s, got %s", StatusFailed, result.Status)
 	}
-	
+
 	if result.Message != message {
 		t.Errorf("Expected message %s, got %s", message, result.Message)
 	}

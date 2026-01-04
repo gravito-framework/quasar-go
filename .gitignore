@@ -3,6 +3,7 @@ dist/
 *.exe
 /quasar-go
 /quasar
+/debug_process
 
 # IDE
 .idea/

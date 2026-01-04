@@ -9,11 +9,11 @@ import (
 
 // LaravelWorkerDetail contains details for a single worker process
 type LaravelWorkerDetail struct {
-	PID      int32   `json:"pid"`
-	Cmdline  string  `json:"cmdline"`
-	Memory   uint64  `json:"memory"` // RSS in bytes
-	CPU      float64 `json:"cpu"`    // Percent
-	Status   string  `json:"status"` // "running", "sleeping", etc.
+	PID     int32   `json:"pid"`
+	Cmdline string  `json:"cmdline"`
+	Memory  uint64  `json:"memory"` // RSS in bytes
+	CPU     float64 `json:"cpu"`    // Percent
+	Status  string  `json:"status"` // "running", "sleeping", etc.
 }
 
 // LaravelWorkerStats contains information about running Laravel workers
@@ -22,7 +22,6 @@ type LaravelWorkerStats struct {
 	Roots       []string              `json:"roots"`
 	Workers     []LaravelWorkerDetail `json:"workers"`
 }
-
 
 var (
 	// workerProcessCache maintains state for process CPU calculations
@@ -55,7 +54,7 @@ func GetLaravelWorkerStats() *LaravelWorkerStats {
 			proc.CPUPercent()
 			workerProcessCache[p.Pid] = proc
 		}
-		
+
 		activePids[p.Pid] = true
 
 		// We need to check cmdline.

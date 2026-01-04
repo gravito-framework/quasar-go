@@ -92,36 +92,36 @@ func Load() *Config {
 // Format: "name:type,name:type" or "name" (defaults to laravel)
 func parseQueues(s string) []QueueConfig {
 	var queues []QueueConfig
-	
+
 	// Split by comma
 	parts := splitAndTrim(s, ",")
 	for _, part := range parts {
 		if part == "" {
 			continue
 		}
-		
+
 		// Split by colon
 		segments := splitAndTrim(part, ":")
 		if len(segments) == 0 {
 			continue
 		}
-		
+
 		qc := QueueConfig{
 			Name: segments[0],
 			Type: "laravel", // default
 		}
-		
+
 		if len(segments) >= 2 {
 			qc.Type = segments[1]
 		}
-		
+
 		if len(segments) >= 3 {
 			qc.Prefix = segments[2]
 		}
-		
+
 		queues = append(queues, qc)
 	}
-	
+
 	return queues
 }
 
@@ -140,10 +140,10 @@ func splitString(s, sep string) []string {
 	if s == "" {
 		return nil
 	}
-	
+
 	var parts []string
 	start := 0
-	
+
 	for i := 0; i < len(s); i++ {
 		if i+len(sep) <= len(s) && s[i:i+len(sep)] == sep {
 			parts = append(parts, s[start:i])
@@ -152,22 +152,22 @@ func splitString(s, sep string) []string {
 		}
 	}
 	parts = append(parts, s[start:])
-	
+
 	return parts
 }
 
 func trimSpace(s string) string {
 	start := 0
 	end := len(s)
-	
+
 	for start < end && (s[start] == ' ' || s[start] == '\t' || s[start] == '\n' || s[start] == '\r') {
 		start++
 	}
-	
+
 	for end > start && (s[end-1] == ' ' || s[end-1] == '\t' || s[end-1] == '\n' || s[end-1] == '\r') {
 		end--
 	}
-	
+
 	return s[start:end]
 }
 
