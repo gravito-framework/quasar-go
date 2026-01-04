@@ -16,7 +16,7 @@
   "id": "CarldeMacBook-Air.local-12744",
   "service": "test-app",
   "language": "go",
-  "version": "go1.25.5",
+  "version": "go1.24",
   "cpu": {
     "system": 0,
     "process": 0.098,
@@ -116,7 +116,7 @@ time=2026-01-03T21:44:56.182+08:00 level=INFO msg="✅ Command executed" type=DE
 #### CI Workflow (`.github/workflows/ci.yml`)
 - **Triggers**: Push to `main`/`develop`, Pull Requests
 - **Jobs**:
-  - ✅ Test (Ubuntu + macOS, Go 1.23-1.25)
+  - ✅ Test (Ubuntu + macOS, Go 1.23-1.24)
   - ✅ Build (Multi-platform binaries)
   - ✅ Lint (golangci-lint)
   - ✅ Docker Build

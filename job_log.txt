@@ -1,0 +1,282 @@
+Test (ubuntu-latest, 1.24)	Set up job	﻿2026-01-04T14:51:43.3989176Z Current runner version: '2.330.0'
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4012677Z ##[group]Runner Image Provisioner
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4013465Z Hosted Compute Agent
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4014021Z Version: 20251211.462
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4014552Z Commit: 6cbad8c2bb55d58165063d031ccabf57e2d2db61
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4015192Z Build Date: 2025-12-11T16:28:49Z
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4015737Z Worker ID: {52140c07-5607-43f7-bbb8-0a77a28cf03c}
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4016409Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4016849Z ##[group]Operating System
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4017333Z Ubuntu
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4017792Z 24.04.3
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4018400Z LTS
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4018820Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4019301Z ##[group]Runner Image
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4019789Z Image: ubuntu-24.04
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4020225Z Version: 20251215.174.1
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4021162Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251215.174/images/ubuntu/Ubuntu2404-Readme.md
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4022378Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251215.174
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4023424Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4025654Z ##[group]GITHUB_TOKEN Permissions
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4027626Z Actions: write
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4028305Z ArtifactMetadata: write
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4028819Z Attestations: write
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4029303Z Checks: write
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4029751Z Contents: write
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4030182Z Deployments: write
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4030647Z Discussions: write
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4031121Z Issues: write
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4031537Z Metadata: read
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4032010Z Models: read
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4032435Z Packages: write
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4032886Z Pages: write
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4033296Z PullRequests: write
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4033916Z RepositoryProjects: write
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4034429Z SecurityEvents: write
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4034881Z Statuses: write
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4035365Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4037319Z Secret source: Actions
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4038180Z Prepare workflow directory
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4395191Z Prepare all required actions
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.4436287Z Getting action download info
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.8711066Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:43.9686501Z Download action repository 'actions/setup-go@v5' (SHA:40f1582b2485089dde7abd97c1529aa768e1baff)
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:44.8178715Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:44.8985634Z Download action repository 'codecov/codecov-action@v4' (SHA:b9fd7d16f6d7d1b5d2bec1a2887e65ceed900238)
+Test (ubuntu-latest, 1.24)	Set up job	2026-01-04T14:51:45.7418516Z Complete job name: Test (ubuntu-latest, 1.24)
+Test (ubuntu-latest, 1.24)	Checkout code	﻿2026-01-04T14:51:45.8238633Z ##[group]Run actions/checkout@v4
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8239958Z with:
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8240707Z   repository: gravito-framework/quasar-go
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8241991Z   token: ***
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8242694Z   ssh-strict: true
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8243416Z   ssh-user: git
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8244197Z   persist-credentials: true
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8245016Z   clean: true
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8245761Z   sparse-checkout-cone-mode: true
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8246644Z   fetch-depth: 1
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8247391Z   fetch-tags: false
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8248277Z   show-progress: true
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8249023Z   lfs: false
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8249701Z   submodules: false
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8250454Z   set-safe-directory: true
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.8251538Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9298850Z Syncing repository: gravito-framework/quasar-go
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9301593Z ##[group]Getting Git version info
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9302806Z Working directory is '/home/runner/work/quasar-go/quasar-go'
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9304602Z [command]/usr/bin/git version
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9346751Z git version 2.52.0
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9371540Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9386111Z Temporarily overriding HOME='/home/runner/work/_temp/6db2436e-bad2-40ee-8b20-790f71a5d840' before making global git config changes
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9390867Z Adding repository directory to the temporary git global config as a safe directory
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9400576Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/quasar-go/quasar-go
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9433355Z Deleting the contents of '/home/runner/work/quasar-go/quasar-go'
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9436667Z ##[group]Initializing the repository
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9441819Z [command]/usr/bin/git init /home/runner/work/quasar-go/quasar-go
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9538416Z hint: Using 'master' as the name for the initial branch. This default branch name
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9541936Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9544843Z hint: to use in all of your new repositories, which will suppress this warning,
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9546514Z hint: call:
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9547517Z hint:
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9548995Z hint: 	git config --global init.defaultBranch <name>
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9550448Z hint:
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9551708Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9553967Z hint: 'development'. The just-created branch can be renamed via this command:
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9555195Z hint:
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9555863Z hint: 	git branch -m <name>
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9556643Z hint:
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9557669Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9559519Z Initialized empty Git repository in /home/runner/work/quasar-go/quasar-go/.git/
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9562341Z [command]/usr/bin/git remote add origin https://github.com/gravito-framework/quasar-go
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9579501Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9580756Z ##[group]Disabling automatic garbage collection
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9582558Z [command]/usr/bin/git config --local gc.auto 0
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9605070Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9606272Z ##[group]Setting up auth
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9611230Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9634808Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9906164Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:45.9933812Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.0096822Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.0120145Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.0292737Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.0319702Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.0321845Z ##[group]Fetching the repository
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.0328951Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +17cd857593a1cfecd5fe487748a309194f4db318:refs/remotes/origin/master
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.4389601Z From https://github.com/gravito-framework/quasar-go
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.4390475Z  * [new ref]         17cd857593a1cfecd5fe487748a309194f4db318 -> origin/master
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.4416796Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.4417525Z ##[group]Determining the checkout info
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.4419161Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.4424431Z [command]/usr/bin/git sparse-checkout disable
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.4457942Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.4479310Z ##[group]Checking out the ref
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.4483237Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.4536316Z Reset branch 'master'
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.4537689Z branch 'master' set up to track 'origin/master'.
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.4547827Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.4574577Z [command]/usr/bin/git log -1 --format=%H
+Test (ubuntu-latest, 1.24)	Checkout code	2026-01-04T14:51:46.4593746Z 17cd857593a1cfecd5fe487748a309194f4db318
+Test (ubuntu-latest, 1.24)	Set up Go	﻿2026-01-04T14:51:46.4863290Z ##[group]Run actions/setup-go@v5
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:46.4863589Z with:
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:46.4863806Z   go-version: 1.24
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:46.4864034Z   check-latest: false
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:46.4864412Z   token: ***
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:46.4864627Z   cache: true
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:46.4864838Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:46.6370940Z Setup go version spec 1.24
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:46.6594241Z Found in cache @ /opt/hostedtoolcache/go/1.24.11/x64
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:46.6594902Z Added go to the path
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:46.6597802Z Successfully set up Go version 1.24
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.5246672Z go: downloading go1.25.5 (linux/amd64)
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.5373519Z [command]/opt/hostedtoolcache/go/1.24.11/x64/bin/go env GOMODCACHE
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.5399945Z [command]/opt/hostedtoolcache/go/1.24.11/x64/bin/go env GOCACHE
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.5448171Z /home/runner/go/pkg/mod
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.5472202Z /home/runner/.cache/go-build
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.7748664Z Cache is not found
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.7768434Z go version go1.25.5 linux/amd64
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.7768734Z 
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.7769085Z ##[group]go env
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8979841Z AR='ar'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8980226Z CC='gcc'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8980490Z CGO_CFLAGS='-O2 -g'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8980789Z CGO_CPPFLAGS=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8981089Z CGO_CXXFLAGS='-O2 -g'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8981391Z CGO_ENABLED='1'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8981729Z CGO_FFLAGS='-O2 -g'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8982030Z CGO_LDFLAGS='-O2 -g'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8982320Z CXX='g++'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8982593Z GCCGO='gccgo'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8982878Z GO111MODULE=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8983142Z GOAMD64='v1'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8983435Z GOARCH='amd64'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8983770Z GOAUTH='netrc'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8984058Z GOBIN=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8984369Z GOCACHE='/home/runner/.cache/go-build'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8984773Z GOCACHEPROG=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8985032Z GODEBUG=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8985363Z GOENV='/home/runner/.config/go/env'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8985737Z GOEXE=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8986065Z GOEXPERIMENT=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8986403Z GOFIPS140='off'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8986742Z GOFLAGS=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8987621Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build624237013=/tmp/go-build -gno-record-gcc-switches'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8988745Z GOHOSTARCH='amd64'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8989041Z GOHOSTOS='linux'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8989319Z GOINSECURE=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8989647Z GOMOD='/home/runner/work/quasar-go/quasar-go/go.mod'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8990073Z GOMODCACHE='/home/runner/go/pkg/mod'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8990422Z GONOPROXY=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8990691Z GONOSUMDB=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8990962Z GOOS='linux'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8991244Z GOPATH='/home/runner/go'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8991532Z GOPRIVATE=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8991923Z GOPROXY='https://proxy.golang.org,direct'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8992636Z GOROOT='/home/runner/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.5.linux-amd64'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8993290Z GOSUMDB='sum.golang.org'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8993642Z GOTELEMETRY='local'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8994045Z GOTELEMETRYDIR='/home/runner/.config/go/telemetry'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8994497Z GOTMPDIR=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8994790Z GOTOOLCHAIN='auto'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8995518Z GOTOOLDIR='/home/runner/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.5.linux-amd64/pkg/tool/linux_amd64'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8996307Z GOVCS=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8996588Z GOVERSION='go1.25.5'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8996880Z GOWORK=''
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8997182Z PKG_CONFIG='pkg-config'
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8997403Z 
+Test (ubuntu-latest, 1.24)	Set up Go	2026-01-04T14:51:50.8998151Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Cache Go modules	﻿2026-01-04T14:51:50.9748771Z ##[group]Run actions/cache@v4
+Test (ubuntu-latest, 1.24)	Cache Go modules	2026-01-04T14:51:50.9749196Z with:
+Test (ubuntu-latest, 1.24)	Cache Go modules	2026-01-04T14:51:50.9749394Z   path: ~/.cache/go-build
+Test (ubuntu-latest, 1.24)	Cache Go modules	~/go/pkg/mod
+Test (ubuntu-latest, 1.24)	Cache Go modules	
+Test (ubuntu-latest, 1.24)	Cache Go modules	2026-01-04T14:51:50.9749819Z   key: Linux-go-1.24-51db21aefd7bd9bd12d35606dafc8b86ddf36525c7a39114f451d7233201cc6b
+Test (ubuntu-latest, 1.24)	Cache Go modules	2026-01-04T14:51:50.9750216Z   restore-keys: Linux-go-1.24-
+Test (ubuntu-latest, 1.24)	Cache Go modules	
+Test (ubuntu-latest, 1.24)	Cache Go modules	2026-01-04T14:51:50.9750460Z   enableCrossOsArchive: false
+Test (ubuntu-latest, 1.24)	Cache Go modules	2026-01-04T14:51:50.9750687Z   fail-on-cache-miss: false
+Test (ubuntu-latest, 1.24)	Cache Go modules	2026-01-04T14:51:50.9750890Z   lookup-only: false
+Test (ubuntu-latest, 1.24)	Cache Go modules	2026-01-04T14:51:50.9751079Z   save-always: false
+Test (ubuntu-latest, 1.24)	Cache Go modules	2026-01-04T14:51:50.9751259Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Cache Go modules	2026-01-04T14:51:51.3094765Z Cache not found for input keys: Linux-go-1.24-51db21aefd7bd9bd12d35606dafc8b86ddf36525c7a39114f451d7233201cc6b, Linux-go-1.24-
+Test (ubuntu-latest, 1.24)	Download dependencies	﻿2026-01-04T14:51:51.3159134Z ##[group]Run go mod download
+Test (ubuntu-latest, 1.24)	Download dependencies	2026-01-04T14:51:51.3159500Z [36;1mgo mod download[0m
+Test (ubuntu-latest, 1.24)	Download dependencies	2026-01-04T14:51:51.3181405Z shell: /usr/bin/bash -e {0}
+Test (ubuntu-latest, 1.24)	Download dependencies	2026-01-04T14:51:51.3181681Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Run tests	﻿2026-01-04T14:51:51.8539690Z ##[group]Run go test -v -race -coverprofile=coverage.out -covermode=atomic ./...
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:51:51.8540200Z [36;1mgo test -v -race -coverprofile=coverage.out -covermode=atomic ./...[0m
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:51:51.8558856Z shell: /usr/bin/bash -e {0}
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:51:51.8559103Z ##[endgroup]
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:01.2439549Z # github.com/gravito-framework/quasar-go/cmd/debug_process
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:01.2440611Z go: no such tool "covdata"
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:15.9905533Z # github.com/gravito-framework/quasar-go/cmd/quasar
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:15.9906105Z go: no such tool "covdata"
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:17.2037084Z # github.com/gravito-framework/quasar-go/internal/redis
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:17.2037654Z go: no such tool "covdata"
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:17.2059378Z # github.com/gravito-framework/quasar-go/pkg/agent
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:17.2070798Z go: no such tool "covdata"
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:17.2090047Z # github.com/gravito-framework/quasar-go/pkg/commands
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:17.2091326Z go: no such tool "covdata"
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:17.2094216Z # github.com/gravito-framework/quasar-go/pkg/probes
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:17.2094914Z go: no such tool "covdata"
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:17.2119954Z # github.com/gravito-framework/quasar-go/pkg/probes/queue
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:17.2121271Z go: no such tool "covdata"
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2222508Z === RUN   TestLoad
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2222926Z === RUN   TestLoad/defaults
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2223319Z === RUN   TestLoad/from_environment
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2223728Z --- PASS: TestLoad (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2224203Z     --- PASS: TestLoad/defaults (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2224734Z     --- PASS: TestLoad/from_environment (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2225168Z === RUN   TestValidate
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2225520Z === RUN   TestValidate/missing_service
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2225937Z === RUN   TestValidate/valid_config
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2226339Z --- PASS: TestValidate (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2226823Z     --- PASS: TestValidate/missing_service (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2227380Z     --- PASS: TestValidate/valid_config (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2227847Z === RUN   TestParseQueues
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2228481Z === RUN   TestParseQueues/single_queue_with_type
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2228983Z === RUN   TestParseQueues/multiple_queues
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2229604Z === RUN   TestParseQueues/queue_without_type_(defaults_to_laravel)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2230171Z === RUN   TestParseQueues/with_prefix
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2230593Z === RUN   TestParseQueues/empty_string
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2231023Z --- PASS: TestParseQueues (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2231601Z     --- PASS: TestParseQueues/single_queue_with_type (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2232256Z     --- PASS: TestParseQueues/multiple_queues (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2233042Z     --- PASS: TestParseQueues/queue_without_type_(defaults_to_laravel) (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2233759Z     --- PASS: TestParseQueues/with_prefix (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2234334Z     --- PASS: TestParseQueues/empty_string (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2234739Z PASS
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2235027Z coverage: 87.9% of statements
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2235699Z ok  	github.com/gravito-framework/quasar-go/pkg/config	1.015s	coverage: 87.9% of statements
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2236652Z === RUN   TestCommandTypeIsAllowed
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2237126Z === RUN   TestCommandTypeIsAllowed/RETRY_JOB_allowed
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2237662Z === RUN   TestCommandTypeIsAllowed/DELETE_JOB_allowed
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2238387Z === RUN   TestCommandTypeIsAllowed/unknown_command_not_allowed
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2239018Z === RUN   TestCommandTypeIsAllowed/empty_command_not_allowed
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2239563Z --- PASS: TestCommandTypeIsAllowed (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2240226Z     --- PASS: TestCommandTypeIsAllowed/RETRY_JOB_allowed (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2240979Z     --- PASS: TestCommandTypeIsAllowed/DELETE_JOB_allowed (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2241795Z     --- PASS: TestCommandTypeIsAllowed/unknown_command_not_allowed (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2242674Z     --- PASS: TestCommandTypeIsAllowed/empty_command_not_allowed (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2243437Z === RUN   TestNewSuccessResult
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2243861Z --- PASS: TestNewSuccessResult (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2244306Z === RUN   TestNewFailedResult
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2244769Z --- PASS: TestNewFailedResult (0.00s)
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2245144Z PASS
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2245423Z coverage: 100.0% of statements
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2246082Z ok  	github.com/gravito-framework/quasar-go/pkg/types	1.012s	coverage: 100.0% of statements
+Test (ubuntu-latest, 1.24)	Run tests	2026-01-04T14:52:18.2680039Z ##[error]Process completed with exit code 1.
+Test (ubuntu-latest, 1.24)	Post Checkout code	﻿2026-01-04T14:52:18.2761268Z Post job cleanup.
+Test (ubuntu-latest, 1.24)	Post Checkout code	2026-01-04T14:52:18.3616530Z [command]/usr/bin/git version
+Test (ubuntu-latest, 1.24)	Post Checkout code	2026-01-04T14:52:18.3648995Z git version 2.52.0
+Test (ubuntu-latest, 1.24)	Post Checkout code	2026-01-04T14:52:18.3685957Z Temporarily overriding HOME='/home/runner/work/_temp/f411c85d-0b85-43f3-a0f8-9a1f05cabd27' before making global git config changes
+Test (ubuntu-latest, 1.24)	Post Checkout code	2026-01-04T14:52:18.3686894Z Adding repository directory to the temporary git global config as a safe directory
+Test (ubuntu-latest, 1.24)	Post Checkout code	2026-01-04T14:52:18.3690964Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/quasar-go/quasar-go
+Test (ubuntu-latest, 1.24)	Post Checkout code	2026-01-04T14:52:18.3721268Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Test (ubuntu-latest, 1.24)	Post Checkout code	2026-01-04T14:52:18.3747472Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Test (ubuntu-latest, 1.24)	Post Checkout code	2026-01-04T14:52:18.3925286Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Test (ubuntu-latest, 1.24)	Post Checkout code	2026-01-04T14:52:18.3943564Z http.https://github.com/.extraheader
+Test (ubuntu-latest, 1.24)	Post Checkout code	2026-01-04T14:52:18.3953461Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Test (ubuntu-latest, 1.24)	Post Checkout code	2026-01-04T14:52:18.3977641Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Test (ubuntu-latest, 1.24)	Post Checkout code	2026-01-04T14:52:18.4148173Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Test (ubuntu-latest, 1.24)	Post Checkout code	2026-01-04T14:52:18.4173798Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Test (ubuntu-latest, 1.24)	Complete job	﻿2026-01-04T14:52:18.4441591Z Cleaning up orphan processes

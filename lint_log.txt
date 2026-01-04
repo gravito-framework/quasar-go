@@ -1,0 +1,234 @@
+Lint	Set up job	﻿2026-01-04T14:51:43.5977397Z Current runner version: '2.330.0'
+Lint	Set up job	2026-01-04T14:51:43.5999973Z ##[group]Runner Image Provisioner
+Lint	Set up job	2026-01-04T14:51:43.6000808Z Hosted Compute Agent
+Lint	Set up job	2026-01-04T14:51:43.6001444Z Version: 20251211.462
+Lint	Set up job	2026-01-04T14:51:43.6002068Z Commit: 6cbad8c2bb55d58165063d031ccabf57e2d2db61
+Lint	Set up job	2026-01-04T14:51:43.6002731Z Build Date: 2025-12-11T16:28:49Z
+Lint	Set up job	2026-01-04T14:51:43.6003494Z Worker ID: {d3242abf-31ae-4bcf-a9ca-c94747bc77cc}
+Lint	Set up job	2026-01-04T14:51:43.6004189Z ##[endgroup]
+Lint	Set up job	2026-01-04T14:51:43.6004710Z ##[group]Operating System
+Lint	Set up job	2026-01-04T14:51:43.6005274Z Ubuntu
+Lint	Set up job	2026-01-04T14:51:43.6005768Z 24.04.3
+Lint	Set up job	2026-01-04T14:51:43.6006197Z LTS
+Lint	Set up job	2026-01-04T14:51:43.6006682Z ##[endgroup]
+Lint	Set up job	2026-01-04T14:51:43.6007218Z ##[group]Runner Image
+Lint	Set up job	2026-01-04T14:51:43.6007715Z Image: ubuntu-24.04
+Lint	Set up job	2026-01-04T14:51:43.6008259Z Version: 20251215.174.1
+Lint	Set up job	2026-01-04T14:51:43.6009671Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251215.174/images/ubuntu/Ubuntu2404-Readme.md
+Lint	Set up job	2026-01-04T14:51:43.6011084Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251215.174
+Lint	Set up job	2026-01-04T14:51:43.6012311Z ##[endgroup]
+Lint	Set up job	2026-01-04T14:51:43.6014784Z ##[group]GITHUB_TOKEN Permissions
+Lint	Set up job	2026-01-04T14:51:43.6016694Z Actions: write
+Lint	Set up job	2026-01-04T14:51:43.6017277Z ArtifactMetadata: write
+Lint	Set up job	2026-01-04T14:51:43.6017785Z Attestations: write
+Lint	Set up job	2026-01-04T14:51:43.6018441Z Checks: write
+Lint	Set up job	2026-01-04T14:51:43.6018907Z Contents: write
+Lint	Set up job	2026-01-04T14:51:43.6019721Z Deployments: write
+Lint	Set up job	2026-01-04T14:51:43.6020309Z Discussions: write
+Lint	Set up job	2026-01-04T14:51:43.6020817Z Issues: write
+Lint	Set up job	2026-01-04T14:51:43.6021269Z Metadata: read
+Lint	Set up job	2026-01-04T14:51:43.6021842Z Models: read
+Lint	Set up job	2026-01-04T14:51:43.6022331Z Packages: write
+Lint	Set up job	2026-01-04T14:51:43.6022797Z Pages: write
+Lint	Set up job	2026-01-04T14:51:43.6023330Z PullRequests: write
+Lint	Set up job	2026-01-04T14:51:43.6023918Z RepositoryProjects: write
+Lint	Set up job	2026-01-04T14:51:43.6024495Z SecurityEvents: write
+Lint	Set up job	2026-01-04T14:51:43.6025020Z Statuses: write
+Lint	Set up job	2026-01-04T14:51:43.6025563Z ##[endgroup]
+Lint	Set up job	2026-01-04T14:51:43.6027464Z Secret source: Actions
+Lint	Set up job	2026-01-04T14:51:43.6028234Z Prepare workflow directory
+Lint	Set up job	2026-01-04T14:51:43.6339714Z Prepare all required actions
+Lint	Set up job	2026-01-04T14:51:43.6379305Z Getting action download info
+Lint	Set up job	2026-01-04T14:51:44.1175119Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+Lint	Set up job	2026-01-04T14:51:44.2298438Z Download action repository 'actions/setup-go@v5' (SHA:40f1582b2485089dde7abd97c1529aa768e1baff)
+Lint	Set up job	2026-01-04T14:51:44.8024688Z Download action repository 'golangci/golangci-lint-action@v6' (SHA:55c2c1448f86e01eaae002a5a3a9624417608d84)
+Lint	Set up job	2026-01-04T14:51:45.4803752Z Complete job name: Lint
+Lint	Checkout code	﻿2026-01-04T14:51:45.5564788Z ##[group]Run actions/checkout@v4
+Lint	Checkout code	2026-01-04T14:51:45.5566099Z with:
+Lint	Checkout code	2026-01-04T14:51:45.5566928Z   repository: gravito-framework/quasar-go
+Lint	Checkout code	2026-01-04T14:51:45.5568236Z   token: ***
+Lint	Checkout code	2026-01-04T14:51:45.5568993Z   ssh-strict: true
+Lint	Checkout code	2026-01-04T14:51:45.5570020Z   ssh-user: git
+Lint	Checkout code	2026-01-04T14:51:45.5570853Z   persist-credentials: true
+Lint	Checkout code	2026-01-04T14:51:45.5571757Z   clean: true
+Lint	Checkout code	2026-01-04T14:51:45.5572571Z   sparse-checkout-cone-mode: true
+Lint	Checkout code	2026-01-04T14:51:45.5573548Z   fetch-depth: 1
+Lint	Checkout code	2026-01-04T14:51:45.5574317Z   fetch-tags: false
+Lint	Checkout code	2026-01-04T14:51:45.5575103Z   show-progress: true
+Lint	Checkout code	2026-01-04T14:51:45.5575883Z   lfs: false
+Lint	Checkout code	2026-01-04T14:51:45.5576597Z   submodules: false
+Lint	Checkout code	2026-01-04T14:51:45.5577404Z   set-safe-directory: true
+Lint	Checkout code	2026-01-04T14:51:45.5578517Z ##[endgroup]
+Lint	Checkout code	2026-01-04T14:51:45.6653329Z Syncing repository: gravito-framework/quasar-go
+Lint	Checkout code	2026-01-04T14:51:45.6655955Z ##[group]Getting Git version info
+Lint	Checkout code	2026-01-04T14:51:45.6657283Z Working directory is '/home/runner/work/quasar-go/quasar-go'
+Lint	Checkout code	2026-01-04T14:51:45.6659502Z [command]/usr/bin/git version
+Lint	Checkout code	2026-01-04T14:51:45.6769084Z git version 2.52.0
+Lint	Checkout code	2026-01-04T14:51:45.6811989Z ##[endgroup]
+Lint	Checkout code	2026-01-04T14:51:45.6837701Z Temporarily overriding HOME='/home/runner/work/_temp/aec5c734-3920-4b03-98cd-2eb43a5d5dca' before making global git config changes
+Lint	Checkout code	2026-01-04T14:51:45.6840784Z Adding repository directory to the temporary git global config as a safe directory
+Lint	Checkout code	2026-01-04T14:51:45.6844485Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/quasar-go/quasar-go
+Lint	Checkout code	2026-01-04T14:51:45.6888135Z Deleting the contents of '/home/runner/work/quasar-go/quasar-go'
+Lint	Checkout code	2026-01-04T14:51:45.6891965Z ##[group]Initializing the repository
+Lint	Checkout code	2026-01-04T14:51:45.6897815Z [command]/usr/bin/git init /home/runner/work/quasar-go/quasar-go
+Lint	Checkout code	2026-01-04T14:51:45.7022997Z hint: Using 'master' as the name for the initial branch. This default branch name
+Lint	Checkout code	2026-01-04T14:51:45.7026242Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Lint	Checkout code	2026-01-04T14:51:45.7029706Z hint: to use in all of your new repositories, which will suppress this warning,
+Lint	Checkout code	2026-01-04T14:51:45.7032210Z hint: call:
+Lint	Checkout code	2026-01-04T14:51:45.7033473Z hint:
+Lint	Checkout code	2026-01-04T14:51:45.7035042Z hint: 	git config --global init.defaultBranch <name>
+Lint	Checkout code	2026-01-04T14:51:45.7037020Z hint:
+Lint	Checkout code	2026-01-04T14:51:45.7038926Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Lint	Checkout code	2026-01-04T14:51:45.7042308Z hint: 'development'. The just-created branch can be renamed via this command:
+Lint	Checkout code	2026-01-04T14:51:45.7044842Z hint:
+Lint	Checkout code	2026-01-04T14:51:45.7046084Z hint: 	git branch -m <name>
+Lint	Checkout code	2026-01-04T14:51:45.7047588Z hint:
+Lint	Checkout code	2026-01-04T14:51:45.7049805Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Lint	Checkout code	2026-01-04T14:51:45.7054375Z Initialized empty Git repository in /home/runner/work/quasar-go/quasar-go/.git/
+Lint	Checkout code	2026-01-04T14:51:45.7066076Z [command]/usr/bin/git remote add origin https://github.com/gravito-framework/quasar-go
+Lint	Checkout code	2026-01-04T14:51:45.7103834Z ##[endgroup]
+Lint	Checkout code	2026-01-04T14:51:45.7106299Z ##[group]Disabling automatic garbage collection
+Lint	Checkout code	2026-01-04T14:51:45.7108516Z [command]/usr/bin/git config --local gc.auto 0
+Lint	Checkout code	2026-01-04T14:51:45.7142600Z ##[endgroup]
+Lint	Checkout code	2026-01-04T14:51:45.7144725Z ##[group]Setting up auth
+Lint	Checkout code	2026-01-04T14:51:45.7152080Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Lint	Checkout code	2026-01-04T14:51:45.7187714Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Lint	Checkout code	2026-01-04T14:51:45.7553478Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Lint	Checkout code	2026-01-04T14:51:45.7581714Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Lint	Checkout code	2026-01-04T14:51:45.7797130Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Lint	Checkout code	2026-01-04T14:51:45.7828628Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Lint	Checkout code	2026-01-04T14:51:45.8047482Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Lint	Checkout code	2026-01-04T14:51:45.8080487Z ##[endgroup]
+Lint	Checkout code	2026-01-04T14:51:45.8081870Z ##[group]Fetching the repository
+Lint	Checkout code	2026-01-04T14:51:45.8090604Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +17cd857593a1cfecd5fe487748a309194f4db318:refs/remotes/origin/master
+Lint	Checkout code	2026-01-04T14:51:46.1886167Z From https://github.com/gravito-framework/quasar-go
+Lint	Checkout code	2026-01-04T14:51:46.1887168Z  * [new ref]         17cd857593a1cfecd5fe487748a309194f4db318 -> origin/master
+Lint	Checkout code	2026-01-04T14:51:46.1919632Z ##[endgroup]
+Lint	Checkout code	2026-01-04T14:51:46.1920582Z ##[group]Determining the checkout info
+Lint	Checkout code	2026-01-04T14:51:46.1921911Z ##[endgroup]
+Lint	Checkout code	2026-01-04T14:51:46.1926655Z [command]/usr/bin/git sparse-checkout disable
+Lint	Checkout code	2026-01-04T14:51:46.1966318Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Lint	Checkout code	2026-01-04T14:51:46.1991897Z ##[group]Checking out the ref
+Lint	Checkout code	2026-01-04T14:51:46.1995314Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+Lint	Checkout code	2026-01-04T14:51:46.2067932Z Reset branch 'master'
+Lint	Checkout code	2026-01-04T14:51:46.2071014Z branch 'master' set up to track 'origin/master'.
+Lint	Checkout code	2026-01-04T14:51:46.2077122Z ##[endgroup]
+Lint	Checkout code	2026-01-04T14:51:46.2109075Z [command]/usr/bin/git log -1 --format=%H
+Lint	Checkout code	2026-01-04T14:51:46.2130262Z 17cd857593a1cfecd5fe487748a309194f4db318
+Lint	Set up Go	﻿2026-01-04T14:51:46.2358024Z ##[group]Run actions/setup-go@v5
+Lint	Set up Go	2026-01-04T14:51:46.2358667Z with:
+Lint	Set up Go	2026-01-04T14:51:46.2359471Z   go-version: 1.25
+Lint	Set up Go	2026-01-04T14:51:46.2360012Z   check-latest: false
+Lint	Set up Go	2026-01-04T14:51:46.2360729Z   token: ***
+Lint	Set up Go	2026-01-04T14:51:46.2361231Z   cache: true
+Lint	Set up Go	2026-01-04T14:51:46.2361736Z ##[endgroup]
+Lint	Set up Go	2026-01-04T14:51:46.3968633Z Setup go version spec 1.25
+Lint	Set up Go	2026-01-04T14:51:46.4187021Z Found in cache @ /opt/hostedtoolcache/go/1.25.5/x64
+Lint	Set up Go	2026-01-04T14:51:46.4191883Z Added go to the path
+Lint	Set up Go	2026-01-04T14:51:46.4196400Z Successfully set up Go version 1.25
+Lint	Set up Go	2026-01-04T14:51:46.9172551Z [command]/opt/hostedtoolcache/go/1.25.5/x64/bin/go env GOMODCACHE
+Lint	Set up Go	2026-01-04T14:51:46.9203724Z [command]/opt/hostedtoolcache/go/1.25.5/x64/bin/go env GOCACHE
+Lint	Set up Go	2026-01-04T14:51:46.9226585Z /home/runner/go/pkg/mod
+Lint	Set up Go	2026-01-04T14:51:46.9257980Z /home/runner/.cache/go-build
+Lint	Set up Go	2026-01-04T14:51:47.2160664Z Cache is not found
+Lint	Set up Go	2026-01-04T14:51:47.2179515Z go version go1.25.5 linux/amd64
+Lint	Set up Go	2026-01-04T14:51:47.2179952Z 
+Lint	Set up Go	2026-01-04T14:51:47.2180409Z ##[group]go env
+Lint	Set up Go	2026-01-04T14:51:47.7535264Z AR='ar'
+Lint	Set up Go	2026-01-04T14:51:47.7536110Z CC='gcc'
+Lint	Set up Go	2026-01-04T14:51:47.7536664Z CGO_CFLAGS='-O2 -g'
+Lint	Set up Go	2026-01-04T14:51:47.7537188Z CGO_CPPFLAGS=''
+Lint	Set up Go	2026-01-04T14:51:47.7537597Z CGO_CXXFLAGS='-O2 -g'
+Lint	Set up Go	2026-01-04T14:51:47.7538106Z CGO_ENABLED='1'
+Lint	Set up Go	2026-01-04T14:51:47.7538562Z CGO_FFLAGS='-O2 -g'
+Lint	Set up Go	2026-01-04T14:51:47.7539664Z CGO_LDFLAGS='-O2 -g'
+Lint	Set up Go	2026-01-04T14:51:47.7539936Z CXX='g++'
+Lint	Set up Go	2026-01-04T14:51:47.7540310Z GCCGO='gccgo'
+Lint	Set up Go	2026-01-04T14:51:47.7540563Z GO111MODULE=''
+Lint	Set up Go	2026-01-04T14:51:47.7540865Z GOAMD64='v1'
+Lint	Set up Go	2026-01-04T14:51:47.7541262Z GOARCH='amd64'
+Lint	Set up Go	2026-01-04T14:51:47.7541491Z GOAUTH='netrc'
+Lint	Set up Go	2026-01-04T14:51:47.7541735Z GOBIN=''
+Lint	Set up Go	2026-01-04T14:51:47.7542075Z GOCACHE='/home/runner/.cache/go-build'
+Lint	Set up Go	2026-01-04T14:51:47.7542439Z GOCACHEPROG=''
+Lint	Set up Go	2026-01-04T14:51:47.7542675Z GODEBUG=''
+Lint	Set up Go	2026-01-04T14:51:47.7543112Z GOENV='/home/runner/.config/go/env'
+Lint	Set up Go	2026-01-04T14:51:47.7543407Z GOEXE=''
+Lint	Set up Go	2026-01-04T14:51:47.7543674Z GOEXPERIMENT=''
+Lint	Set up Go	2026-01-04T14:51:47.7544030Z GOFIPS140='off'
+Lint	Set up Go	2026-01-04T14:51:47.7544279Z GOFLAGS=''
+Lint	Set up Go	2026-01-04T14:51:47.7544953Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build3862253131=/tmp/go-build -gno-record-gcc-switches'
+Lint	Set up Go	2026-01-04T14:51:47.7545662Z GOHOSTARCH='amd64'
+Lint	Set up Go	2026-01-04T14:51:47.7545983Z GOHOSTOS='linux'
+Lint	Set up Go	2026-01-04T14:51:47.7546243Z GOINSECURE=''
+Lint	Set up Go	2026-01-04T14:51:47.7546635Z GOMOD='/home/runner/work/quasar-go/quasar-go/go.mod'
+Lint	Set up Go	2026-01-04T14:51:47.7547043Z GOMODCACHE='/home/runner/go/pkg/mod'
+Lint	Set up Go	2026-01-04T14:51:47.7547364Z GONOPROXY=''
+Lint	Set up Go	2026-01-04T14:51:47.7547690Z GONOSUMDB=''
+Lint	Set up Go	2026-01-04T14:51:47.7547932Z GOOS='linux'
+Lint	Set up Go	2026-01-04T14:51:47.7548206Z GOPATH='/home/runner/go'
+Lint	Set up Go	2026-01-04T14:51:47.7548447Z GOPRIVATE=''
+Lint	Set up Go	2026-01-04T14:51:47.7548838Z GOPROXY='https://proxy.golang.org,direct'
+Lint	Set up Go	2026-01-04T14:51:47.7549670Z GOROOT='/opt/hostedtoolcache/go/1.25.5/x64'
+Lint	Set up Go	2026-01-04T14:51:47.7550081Z GOSUMDB='sum.golang.org'
+Lint	Set up Go	2026-01-04T14:51:47.7550487Z GOTELEMETRY='local'
+Lint	Set up Go	2026-01-04T14:51:47.7550791Z GOTELEMETRYDIR='/home/runner/.config/go/telemetry'
+Lint	Set up Go	2026-01-04T14:51:47.7551193Z GOTMPDIR=''
+Lint	Set up Go	2026-01-04T14:51:47.7551490Z GOTOOLCHAIN='auto'
+Lint	Set up Go	2026-01-04T14:51:47.7551878Z GOTOOLDIR='/opt/hostedtoolcache/go/1.25.5/x64/pkg/tool/linux_amd64'
+Lint	Set up Go	2026-01-04T14:51:47.7552286Z GOVCS=''
+Lint	Set up Go	2026-01-04T14:51:47.7552597Z GOVERSION='go1.25.5'
+Lint	Set up Go	2026-01-04T14:51:47.7552846Z GOWORK=''
+Lint	Set up Go	2026-01-04T14:51:47.7553123Z PKG_CONFIG='pkg-config'
+Lint	Set up Go	2026-01-04T14:51:47.7553272Z 
+Lint	Set up Go	2026-01-04T14:51:47.7553932Z ##[endgroup]
+Lint	golangci-lint	﻿2026-01-04T14:51:47.7719570Z ##[group]Run golangci/golangci-lint-action@v6
+Lint	golangci-lint	2026-01-04T14:51:47.7719956Z with:
+Lint	golangci-lint	2026-01-04T14:51:47.7720262Z   version: latest
+Lint	golangci-lint	2026-01-04T14:51:47.7720579Z   args: --timeout=5m
+Lint	golangci-lint	2026-01-04T14:51:47.7720887Z   install-mode: binary
+Lint	golangci-lint	2026-01-04T14:51:47.7721295Z   github-token: ***
+Lint	golangci-lint	2026-01-04T14:51:47.7721625Z   verify: true
+Lint	golangci-lint	2026-01-04T14:51:47.7722174Z   only-new-issues: false
+Lint	golangci-lint	2026-01-04T14:51:47.7722442Z   skip-cache: false
+Lint	golangci-lint	2026-01-04T14:51:47.7722759Z   skip-save-cache: false
+Lint	golangci-lint	2026-01-04T14:51:47.7723036Z   problem-matchers: false
+Lint	golangci-lint	2026-01-04T14:51:47.7723352Z   cache-invalidation-interval: 7
+Lint	golangci-lint	2026-01-04T14:51:47.7723620Z ##[endgroup]
+Lint	golangci-lint	2026-01-04T14:51:47.9453027Z ##[group]prepare environment
+Lint	golangci-lint	2026-01-04T14:51:47.9457344Z Checking for go.mod: go.mod
+Lint	golangci-lint	2026-01-04T14:51:48.2091021Z Cache not found for input keys: golangci-lint.cache-Linux-2922-1b88141e431e8cf6065158bd92e220587536aca4, golangci-lint.cache-Linux-2922-
+Lint	golangci-lint	2026-01-04T14:51:48.2093386Z Finding needed golangci-lint version...
+Lint	golangci-lint	2026-01-04T14:51:48.2095982Z Installation mode: binary
+Lint	golangci-lint	2026-01-04T14:51:48.2097369Z Installing golangci-lint binary v1.64.8...
+Lint	golangci-lint	2026-01-04T14:51:48.2100229Z Downloading binary https://github.com/golangci/golangci-lint/releases/download/v1.64.8/golangci-lint-1.64.8-linux-amd64.tar.gz ...
+Lint	golangci-lint	2026-01-04T14:51:48.5632562Z [command]/usr/bin/tar xz --overwrite --warning=no-unknown-keyword --overwrite -C /home/runner -f /home/runner/work/_temp/024c30d6-0935-4327-850b-1135cdda9415
+Lint	golangci-lint	2026-01-04T14:51:48.7747462Z Installed golangci-lint into /home/runner/golangci-lint-1.64.8-linux-amd64/golangci-lint in 565ms
+Lint	golangci-lint	2026-01-04T14:51:48.7748356Z Prepared env in 829ms
+Lint	golangci-lint	2026-01-04T14:51:48.7750197Z ##[endgroup]
+Lint	golangci-lint	2026-01-04T14:51:48.7752500Z ##[group]run golangci-lint
+Lint	golangci-lint	2026-01-04T14:51:48.7761756Z Running [/home/runner/golangci-lint-1.64.8-linux-amd64/golangci-lint config path] in [/home/runner/work/quasar-go/quasar-go] ...
+Lint	golangci-lint	2026-01-04T14:51:48.8682773Z Running [/home/runner/golangci-lint-1.64.8-linux-amd64/golangci-lint run  --timeout=5m] in [/home/runner/work/quasar-go/quasar-go] ...
+Lint	golangci-lint	2026-01-04T14:51:48.9545988Z Error: can't load config: the Go language version (go1.24) used to build golangci-lint is lower than the targeted Go version (1.25.5)
+Lint	golangci-lint	2026-01-04T14:51:48.9547523Z Failed executing command with error: can't load config: the Go language version (go1.24) used to build golangci-lint is lower than the targeted Go version (1.25.5)
+Lint	golangci-lint	2026-01-04T14:51:48.9548381Z 
+Lint	golangci-lint	2026-01-04T14:51:48.9566377Z ##[error]golangci-lint exit with code 3
+Lint	golangci-lint	2026-01-04T14:51:48.9574084Z Ran golangci-lint in 86ms
+Lint	golangci-lint	2026-01-04T14:51:48.9574550Z ##[endgroup]
+Lint	Post golangci-lint	﻿2026-01-04T14:51:48.9697710Z Post job cleanup.
+Lint	Post golangci-lint	2026-01-04T14:51:49.1486213Z [warning] Path Validation Error: Path(s) specified in the action for caching do(es) not exist, hence no cache is being saved.
+Lint	Post Checkout code	﻿2026-01-04T14:51:49.1597647Z Post job cleanup.
+Lint	Post Checkout code	2026-01-04T14:51:49.2524505Z [command]/usr/bin/git version
+Lint	Post Checkout code	2026-01-04T14:51:49.2560394Z git version 2.52.0
+Lint	Post Checkout code	2026-01-04T14:51:49.2622074Z Temporarily overriding HOME='/home/runner/work/_temp/7b7a09fc-c76e-4559-b34e-e45c7abc8c9d' before making global git config changes
+Lint	Post Checkout code	2026-01-04T14:51:49.2623292Z Adding repository directory to the temporary git global config as a safe directory
+Lint	Post Checkout code	2026-01-04T14:51:49.2638161Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/quasar-go/quasar-go
+Lint	Post Checkout code	2026-01-04T14:51:49.2678292Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Lint	Post Checkout code	2026-01-04T14:51:49.2715033Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Lint	Post Checkout code	2026-01-04T14:51:49.2966308Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Lint	Post Checkout code	2026-01-04T14:51:49.2988102Z http.https://github.com/.extraheader
+Lint	Post Checkout code	2026-01-04T14:51:49.3005030Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Lint	Post Checkout code	2026-01-04T14:51:49.3039343Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Lint	Post Checkout code	2026-01-04T14:51:49.3277375Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Lint	Post Checkout code	2026-01-04T14:51:49.3309961Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Lint	Complete job	﻿2026-01-04T14:51:49.3673355Z Cleaning up orphan processes
