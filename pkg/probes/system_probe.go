@@ -126,16 +126,14 @@ func (p *GoSystemProbe) getDarwinSystemCPU() (float64, error) {
 			// Parse user
 			userPart := strings.TrimSpace(strings.TrimPrefix(parts[0], "CPU usage:"))
 			userVal := 0.0
-			if _, err := fmt.Sscanf(userPart, "%f%%", &userVal); err != nil {
-				// Continue with next part if parsing fails
-			}
+			// ignore error
+			_, _ = fmt.Sscanf(userPart, "%f%%", &userVal)
 
 			// Parse sys
 			sysPart := strings.TrimSpace(parts[1])
 			sysVal := 0.0
-			if _, err := fmt.Sscanf(sysPart, "%f%%", &sysVal); err != nil {
-				// Continue
-			}
+			// ignore error
+			_, _ = fmt.Sscanf(sysPart, "%f%%", &sysVal)
 
 			return round(userVal+sysVal, 2), nil
 		}
